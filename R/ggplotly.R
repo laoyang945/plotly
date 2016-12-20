@@ -872,7 +872,7 @@ gg2list <- function(p, width = NULL, height = NULL,
   gglayout$hovermode <- "closest"
   ax <- grep("^[x-y]axis", names(gglayout))
   for (i in ax) {
-    gglayout[[i]]$hoverformat <- ".2f"
+    gglayout[[i]]$hoverformat <- ".4f"
   }
   # If a trace isn't named, it shouldn't have additional hoverinfo
   traces <- lapply(compact(traces), function(x) { x$name <- x$name %||% ""; x })
